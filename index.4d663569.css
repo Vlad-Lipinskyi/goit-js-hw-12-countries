@@ -1,0 +1,88 @@
+main {
+  justify-content: center;
+  display: flex;
+}
+
+.title {
+  text-align: center;
+}
+
+.search-box {
+  background-color: #faebd7;
+  border: 2px solid #939393;
+  border-radius: 5px;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+  height: 400px;
+  display: flex;
+  box-shadow: 0 10px 10px 1px;
+}
+
+#search-country {
+  border: 1px solid #000;
+  border-radius: 3px;
+  width: 530px;
+  height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.country-box {
+  flex-direction: column;
+  width: min-content;
+  display: flex;
+}
+
+.country-couple {
+  display: flex;
+}
+
+.country-title {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.country-list {
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  margin-right: 15px;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+}
+
+.capital {
+  margin: 0;
+  display: flex;
+}
+
+.capitals-list {
+  padding-top: 10px;
+}
+
+.language {
+  margin: 0;
+  display: flex;
+}
+
+.country-denomination {
+  padding-right: 5px;
+  font-weight: 700;
+}
+
+.languages-list {
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 10px;
+  display: flex;
+}
+
+.country-flag {
+  border: 2px solid #000;
+  height: 150px;
+}
+/*# sourceMappingURL=index.4d663569.css.map */
