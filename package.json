@@ -1,0 +1,23 @@
+{
+  "name": "goit-js-hw-12-countries",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npx parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pnotify/confirm": "^5.2.0",
+    "@pnotify/core": "^5.2.0",
+    "dist": "^0.1.2",
+    "gh-pages": "^6.3.0",
+    "lodash.debounce": "^4.0.8",
+    "parcel": "^2.13.3",
+    "pnotify": "^5.2.0"
+  }
+}
