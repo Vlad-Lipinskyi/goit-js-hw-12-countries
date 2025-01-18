@@ -4,12 +4,12 @@ import { error } from "@pnotify/core";
 import "@pnotify/core/dist/PNotify.css";
 import "@pnotify/core/dist/BrightTheme.css";
 
-const searchInputEl = document.querySelector("#search-country");
-const countriesListEl = document.querySelector(".countries-list");
-const countryInfoEl = document.querySelector(".country-info");
+const searchInput = document.querySector("#search-country");
+const countriesList = document.querySector(".countries-list");
+const countryInfo = document.querySector(".country-info");
 
 const renderCountriesList = (countries) => {
-  countriesListEl.innerHTML = countries
+  countriesList.innerHTML = countries
     .map((country) => {
       return `<li class="country-item">
                 <p>${country.name.common}</p>
@@ -17,7 +17,7 @@ const renderCountriesList = (countries) => {
     })
     .join("");
 
-  countryInfoEl.innerHTML = "";
+  countryInfo.innerHTML = "";
 };
 
 const renderCountryInfo = (country) => {
@@ -55,7 +55,7 @@ const renderCountryInfo = (country) => {
     }
   };
 
-  countryInfoEl.innerHTML = `
+  countryInfo.innerHTML = `
     <div class="country-box">
       <h2 class="country-title">${name.common}</h2>
       <div class="country-couple">
@@ -69,20 +69,20 @@ const renderCountryInfo = (country) => {
     </div>
     `;
 
-  const countryCapitalEl = document.querySelector(".country-capital");
+  const countryCapital = document.querySector(".country-capital");
   if (Object.values(capital).length === 1) {
-    countryCapitalEl.classList.add("capital");
+    countryCapital.classList.add("capital");
   }
 
-  const countryLanguagesEl = document.querySelector(".country-languages");
+  const countryLanguages = document.querySector(".country-languages");
   if (Object.values(languages).length === 1) {
-    countryLanguagesEl.classList.add("language");
+    countryLanguages.classList.add("language");
   }
 
-  countriesListEl.innerHTML = "";
+  countriesList.innerHTML = "";
 };
 
-searchInputEl.addEventListener(
+searchInput.addEventListener(
   "input",
   debounce((e) => {
     const query = e.target.value.trim();
@@ -91,7 +91,7 @@ searchInputEl.addEventListener(
       .then((countries) => {
         if (countries.length > 10) {
           error({
-            text: "Too many matches found. Please enter a more specific query!",
+            text: "Знайдено забагато збігів. Будь ласка, введіть більш конкретний запит",
           });
           return;
         }
@@ -103,8 +103,8 @@ searchInputEl.addEventListener(
         }
       })
       .catch(() => {
-        countriesListEl.innerHTML = "";
-        countryInfoEl.innerHTML = "";
+        countriesList.innerHTML = "";
+        countryInfo.innerHTML = "";
 
         error({
           text: "Країну не знайдено, спробуйте ще раз",
